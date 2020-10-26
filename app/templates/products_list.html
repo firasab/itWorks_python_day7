@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>My online shop</title>
+    {% endif %}
+
+    <h1>pruducts:</h1>
+
+    {% for product in products %}
+    <div>
+        <p>Name: {{ product['name'] | title }}</p>
+        <p>id: {{ product['id'] }}</p>
+        <p>price: {{ product['price'] }}</p>
+        <p>stock quantity: {{ product['stock quantity'] }}</p>
+        <p>category: {{ product['category'] }}</p>>
+    </div>
+    {% endfor %}
+
+{% endblock %}
